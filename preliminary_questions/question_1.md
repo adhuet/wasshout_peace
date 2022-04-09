@@ -12,7 +12,7 @@ So what kind of component(s) (listed in the lecture) will the architecture need?
 ### Technical Constraints
 - be able to store large amounts/quantities of data
 - store data forever
-- must be accesable
+- must be accessible
 - geared towards reporting/analysis
 
 
@@ -22,8 +22,8 @@ So what kind of component(s) (listed in the lecture) will the architecture need?
 - Data must be consistent for reporting
 
 ### Components
-#### Distribtued Data Warehouse
-- Data warehouse distriputed over network of machines
+#### Distributed Data Warehouse
+- Data warehouse distributed over network of machines
 - Is centered towards reporting/analysis
 - CAP Theorem: CP because reports must be consistent meaning data access must be consistent
 - Contains structured data therefore easier to interpret, query, analyse
