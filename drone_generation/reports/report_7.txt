@@ -1,0 +1,10 @@
+{'timestamp': '2022-06-09T17:18:44.093725', 'name': 'Andrea Robinson', 'score': 50}
+{'timestamp': '2022-06-09T17:19:06.093927', 'name': 'Danielle Moore', 'score': 37}
+{'timestamp': '2022-06-09T17:19:27.094074', 'name': 'Kelly Walker', 'score': 6}
+{'timestamp': '2022-06-09T17:19:49.094192', 'name': 'Fernando Soto', 'score': 83}
+{'timestamp': '2022-06-09T17:20:12.094319', 'name': 'Douglas Hernandez', 'score': 39}
+{'timestamp': '2022-06-09T17:20:33.094466', 'name': 'Tony Russell', 'score': 2}
+{'timestamp': '2022-06-09T17:20:59.094574', 'name': 'Mark Lopez', 'score': 41}
+{'timestamp': '2022-06-09T17:21:23.094676', 'name': 'Mike Hox', 'score': 31}
+{'timestamp': '2022-06-09T17:21:46.094777', 'name': 'Stephen Santos', 'score': 84}
+{'timestamp': '2022-06-09T17:22:07.094877', 'name': 'Jeremy Juarez', 'score': 53}

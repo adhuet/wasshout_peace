@@ -1,0 +1,10 @@
+{'timestamp': '2022-06-09T17:15:02.086908', 'name': 'Michael Andrews', 'score': 55}
+{'timestamp': '2022-06-09T17:15:24.087099', 'name': 'Lori Riddle', 'score': 46}
+{'timestamp': '2022-06-09T17:15:47.087219', 'name': 'Zachary Hogan', 'score': 22}
+{'timestamp': '2022-06-09T17:16:12.087326', 'name': 'Jamie Armstrong', 'score': 97}
+{'timestamp': '2022-06-09T17:16:32.087432', 'name': 'Christina Galloway', 'score': 7}
+{'timestamp': '2022-06-09T17:16:53.087537', 'name': 'James Palmer', 'score': 49}
+{'timestamp': '2022-06-09T17:17:13.087639', 'name': 'Samuel Fuller', 'score': 86}
+{'timestamp': '2022-06-09T17:17:38.087741', 'name': 'Nathan Chase', 'score': 44}
+{'timestamp': '2022-06-09T17:18:03.087843', 'name': 'Heidi Decker', 'score': 59}
+{'timestamp': '2022-06-09T17:18:23.087947', 'name': 'Seth Richards', 'score': 35}

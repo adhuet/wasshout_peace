@@ -1,0 +1,10 @@
+{'timestamp': '2022-06-09T17:26:25.107877', 'name': 'Nancy Ortiz', 'score': 52}
+{'timestamp': '2022-06-09T17:26:48.108065', 'name': 'April Espinoza', 'score': 4}
+{'timestamp': '2022-06-09T17:27:13.108178', 'name': 'Linda Delgado', 'score': 51}
+{'timestamp': '2022-06-09T17:27:36.108284', 'name': 'Rhonda Johnson', 'score': 41}
+{'timestamp': '2022-06-09T17:27:58.108388', 'name': 'Michael Jones', 'score': 31}
+{'timestamp': '2022-06-09T17:28:22.108491', 'name': 'Joel Goodwin', 'score': 9}
+{'timestamp': '2022-06-09T17:28:43.108589', 'name': 'Nicole Massey', 'score': 13}
+{'timestamp': '2022-06-09T17:29:03.108690', 'name': 'FuckDeclan Lopez', 'score': 47}
+{'timestamp': '2022-06-09T17:29:29.108790', 'name': 'Jeffrey Chapman', 'score': 7}
+{'timestamp': '2022-06-09T17:29:52.108887', 'name': 'April James', 'score': 77}
