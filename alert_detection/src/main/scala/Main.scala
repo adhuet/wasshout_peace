@@ -5,7 +5,6 @@ import org.apache.spark.sql.types.{IntegerType, StringType, StructField, StructT
 
 object Main {
   def main(args: Array[String]): Unit = {
-    
     // Spark session
     val spark = SparkSession
       .builder
@@ -51,7 +50,7 @@ object Main {
       .start()
       .awaitTermination()
 
-    // Write to console sink
+//    //Write to console sink
 //    alert_df.writeStream
 //      .format("console")
 //      .option("truncate","false")
