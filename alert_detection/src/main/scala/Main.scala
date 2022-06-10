@@ -1,6 +1,5 @@
-import org.apache.spark.sql.catalyst.dsl.expressions.StringToAttributeConversionHelper
-import org.apache.spark.sql.functions.{col, concat, concat_ws, from_json, lit}
-import org.apache.spark.sql.{ForeachWriter, Row, SparkSession}
+import org.apache.spark.sql.functions.{col, concat_ws, from_json}
+import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.types.{FloatType, IntegerType, StringType, StructField, StructType, TimestampType}
 
 object Main {
@@ -14,13 +13,13 @@ object Main {
 
     // Schema for the reports in Json format
     val schema = StructType(List(
-      StructField("timestamp", TimestampType, true),
-      StructField("id", IntegerType, true),
-      StructField("name", StringType, true),
-      StructField("score", IntegerType, true),
-      StructField("latitude", FloatType, true),
-      StructField("longitude", FloatType, true),
-      StructField("words", StringType, true))
+      StructField("timestamp", TimestampType, nullable = true),
+      StructField("id", IntegerType, nullable = true),
+      StructField("name", StringType, nullable = true),
+      StructField("score", IntegerType, nullable = true),
+      StructField("latitude", FloatType, nullable = true),
+      StructField("longitude", FloatType, nullable = true),
+      StructField("words", StringType, nullable = true))
     )
 
     // Initial DF
@@ -61,13 +60,5 @@ object Main {
       .option("checkpointLocation", "checkpoint/kafka_checkpoint")
       .start()
       .awaitTermination()
-
-//    //Write to console sink
-//    alert_df.writeStream
-//      .format("console")
-//      .option("truncate","false")
-//      //      .foreach(customWriter)
-//      .start()
-//      .awaitTermination()
   }
 }

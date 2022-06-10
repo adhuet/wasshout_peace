@@ -1,14 +1,13 @@
 import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.fs.{FSDataOutputStream, FileSystem, Path}
 import org.apache.kafka.clients.consumer.{ConsumerConfig, ConsumerRecords, KafkaConsumer}
-import org.apache.kafka.common.serialization.{StringDeserializer, StringSerializer}
+import org.apache.kafka.common.serialization.StringDeserializer
 import net.liftweb.json._
 
 
 import java.time.Duration
 import java.util.{Calendar, Properties}
 import java.util
-import java.io.PrintWriter
 import java.text.SimpleDateFormat
 import scala.annotation.tailrec
 import scala.collection.JavaConverters.iterableAsScalaIterableConverter
