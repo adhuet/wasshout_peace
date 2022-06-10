@@ -4,3 +4,5 @@ __pycache__
 .bsp/
 .metals/
 .vscode/
+*.classes
+*.cache
