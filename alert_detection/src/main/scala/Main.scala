@@ -1,7 +1,7 @@
 import org.apache.spark.sql.catalyst.dsl.expressions.StringToAttributeConversionHelper
 import org.apache.spark.sql.functions.{col, concat, concat_ws, from_json, lit}
 import org.apache.spark.sql.{ForeachWriter, Row, SparkSession}
-import org.apache.spark.sql.types.{IntegerType, StringType, StructField, StructType}
+import org.apache.spark.sql.types.{FloatType, IntegerType, StringType, StructField, StructType, TimestampType}
 
 object Main {
   def main(args: Array[String]): Unit = {
@@ -14,9 +14,14 @@ object Main {
 
     // Schema for the reports in Json format
     val schema = StructType(List(
+      StructField("timestamp", TimestampType, true),
+      StructField("id", IntegerType, true),
       StructField("name", StringType, true),
-      StructField("score", IntegerType, true)
-    ))
+      StructField("score", IntegerType, true),
+      StructField("latitude", FloatType, true),
+      StructField("longitude", FloatType, true),
+      StructField("words", StringType, true))
+    )
 
     // Initial DF
     val init_df = spark
@@ -37,7 +42,14 @@ object Main {
     // Convert DF to kafka stream format
     val kafka_df = alert_df.withColumn(
       "value",
-      concat_ws("|", col("name"), col("score"))
+      concat_ws("|",
+        col("timestamp"),
+        col("id"),
+        col("name"),
+        col("score"),
+        col("latitude"),
+        col("longitude"),
+        col("words"))
     )
 
     // Write to Kafka sink
