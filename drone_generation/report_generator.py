@@ -34,5 +34,4 @@ for _ in range(10):
     report = {'timestamp':ts, 'id': id, 'name': fake.name(), 'score':random.randint(0,100), 'latitude': latitude + dec_lat, 'longitude': longitude + dec_lon, 'words': words}
     print(str(report))
     delta += 20 + random.randint(0, 6)
-
     
