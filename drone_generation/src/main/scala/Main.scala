@@ -36,5 +36,6 @@ object Main {
 
     Thread.sleep(4000)
     handle_reports(producer, generator)
+
   }
 }
