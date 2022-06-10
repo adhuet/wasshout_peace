@@ -19,16 +19,24 @@
             <thead>
                 <tr>
                     <th>Timestamp</th>
+                    <th>Peacewatcher</th>
                     <th>Name</th>
                     <th>Score</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                    <th>Words</th>
                 </tr>
             </thead>
             <tbody>
                 {% for alert in alerts %}
                 <tr>
                     <td>{{ alert.timestamp }}</td>
+                    <td>{{ alert.id }}</td>
                     <td>{{ alert.name }}</td>
                     <td>{{ alert.score }}</td>
+                    <td>{{ alert.latitude }}</td>
+                    <td>{{ alert.longitude }}</td>
+                    <td>{{ alert.words }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
