@@ -1,1 +1,0 @@
-{'name': 'ziva', 'score': 18}

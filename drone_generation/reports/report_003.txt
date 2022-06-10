@@ -1,1 +1,0 @@
-{'name': 'rick', 'score': 12}

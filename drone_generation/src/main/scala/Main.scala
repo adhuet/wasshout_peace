@@ -15,27 +15,26 @@ object Main {
     // Reports from file
     // val bufferedSource = Source.fromFile(reportsFile)
     // val reportJsonStrings = bufferedSource.getLines().toList
-    val reportGenerator : ReportGenerator = new ReportGenerator()
-    val reportJsonStrings = reportGenerator.generate().toList
+    val generator : ReportGenerator = new ReportGenerator()
 
-    reportJsonStrings.foreach(s => println(s))
     // Kafka Producer
     val producer = ReportProducer(bootstrapServer, topic)
 
     // Send reports indefinitely
     try {
-      handle_reports(producer, reportJsonStrings)
+      handle_reports(producer, generator)
     }
     /* finally {
       bufferedSource.close()
     } */
   }
 
-  def handle_reports(producer: ReportProducer, reportJsonStrings: List[String]):Unit = {
+  def handle_reports(producer: ReportProducer, generator: ReportGenerator):Unit = {
+    val reportJsonStrings = generator.generate()
     reportJsonStrings.foreach(s => producer.produceMessage(s))
     println("send batch")
 
     Thread.sleep(4000)
-    handle_reports(producer, reportJsonStrings)
+    handle_reports(producer, generator)
   }
 }

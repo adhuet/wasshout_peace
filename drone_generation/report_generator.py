@@ -20,7 +20,7 @@ for _ in range(10):
     ts = datetime.datetime.now() + datetime.timedelta(seconds=delta)
     ts = ts.isoformat()
     report = {'timestamp':ts, 'name': fake.name(), 'score':random.randint(0,100)}
-    print(str(report) + "\n")
+    print(str(report))
     delta += 20 + random.randint(0, 6)
 
     

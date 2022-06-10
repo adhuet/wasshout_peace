@@ -13,10 +13,10 @@ app = Flask('Wasshout peace')
 # {'name': 'dave', 'score': 19},
 # {'name': 'garry', 'score': 20}]
 
-alerts = []
 
 @app.route('/')
 def home():
+    alerts = []
     bootstrap_servers = ['localhost:9092']
     topic_name = 'reports'
     consumer = KafkaConsumer(bootstrap_servers=bootstrap_servers)
@@ -27,7 +27,7 @@ def home():
     consumer.seek_to_beginning(tp)
 
     for msg in consumer:
-        print(msg.value)
+        # print(msg.value)
         alerts.append(literal_eval(msg.value.decode('utf-8')))
         if msg.offset == lastOffset - 1:
             break
